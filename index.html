@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIMP AI Opportunity Matching Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Main Menu -->
+        <div id="menu-screen" class="menu-screen">
+            <h1>DIMP AI Training</h1>
+            <p class="menu-subtitle">Select an exercise to begin</p>
+            <div class="exercise-cards">
+                <button class="exercise-card" data-exercise="exercise1">
+                    <div class="exercise-icon">🔵</div>
+                    <h3>Exercise 1: AI Opportunity Match</h3>
+                    <p>Match business questions to the correct AI technique.</p>
+                    <div class="exercise-stats">
+                        <span>5 Questions</span>
+                        <span>Blue Theme</span>
+                    </div>
+                </button>
+                <button class="exercise-card" data-exercise="exercise2">
+                    <div class="exercise-icon">🟢</div>
+                    <h3>Exercise 2: AI Capability Match</h3>
+                    <p>Match business questions to the correct AI capability.</p>
+                    <div class="exercise-stats">
+                        <span>4 Questions</span>
+                        <span>Green Theme</span>
+                    </div>
+                </button>
+            </div>
+            <div id="combined-score" class="combined-score">
+                <div class="score-item">
+                    <span>Combined Score:</span>
+                    <strong id="total-score">0/9</strong>
+                </div>
+            </div>
+        </div>
+
+        <header id="game-header">
+            <h1 id="header-title">DIMP AI Opportunity Matching Game</h1>
+            <div id="progress" class="progress">Question 1 of 5</div>
+            <button id="menu-btn" class="menu-btn">← Menu</button>
+        </header>
+
+        <main id="game-area">
+            <div id="question-card" class="question-card">
+                <h2 id="question-text" class="question-text">Loading...</h2>
+            </div>
+
+            <div id="options-grid" class="options-grid">
+                <!-- Options will be injected here dynamically -->
+            </div>
+        </main>
+
+        <div id="feedback-modal" class="feedback-modal">
+            <div class="feedback-content">
+                <div id="feedback-icon" class="feedback-icon"></div>
+                <h3 id="feedback-title"></h3>
+                <p id="feedback-text"></p>
+                <button id="continue-btn" class="continue-btn">Continue</button>
+            </div>
+        </div>
+
+        <div id="results-screen" class="results-screen">
+            <h2>Exercise Complete!</h2>
+            <div class="score-display">
+                <div class="final-score" id="final-score"></div>
+                <div class="percentage-display" id="percentage-display"></div>
+            </div>
+            <div class="learning-summary">
+                <h3>Learning Summary</h3>
+                <p id="learning-summary"></p>
+            </div>
+            <button id="restart-btn" class="restart-btn">Play Again</button>
+            <button id="menu-btn-results" class="menu-btn-results">← Return to Menu</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
